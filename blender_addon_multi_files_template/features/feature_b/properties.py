@@ -1,6 +1,6 @@
 # **************************************************
 # Feature B Properties
-# *************************************************
+# **************************************************
 
 import bpy
 from bpy.props import BoolProperty, StringProperty, IntProperty, FloatProperty, EnumProperty, PointerProperty, CollectionProperty
