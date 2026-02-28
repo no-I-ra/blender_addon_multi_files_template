@@ -28,7 +28,7 @@ Templates to customize other Blender's UI areas will come later.
 * Rename the prefixes __NOIRATEMPLATE__ and __noiratemplate__ that are used in classes to match with your addon name.
 * Change the __bl_category__ of panels to match with your addon.
 * Rename _features/feature_a_ folder and its file content to match with your addon features. Duplicate it to add another feature.
-* Update _features/\_\_init\_\_.py_ to add all the feature classes your addon implements to "FEATURES = ()". Add an import reload for each feature as well.
+* Update _features/\_\_init\_\_.py_ to add all the feature classes your addon implements to __FEATURES = ()__. Add an import reload for each feature as well.
 
 
 
