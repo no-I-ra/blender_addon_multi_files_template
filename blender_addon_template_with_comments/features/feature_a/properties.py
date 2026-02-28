@@ -6,8 +6,9 @@ import bpy
 from bpy.props import BoolProperty
 
 class NOIRATEMPLATE_FeatureAProperties(bpy.types.PropertyGroup):
-    use_grid_snap: BoolProperty(
-        name="Use Grid Snap", default=True
+    bool_ppty: BoolProperty(
+        name="Boolean property",
+        default=True
         ) # type: ignore
 
 

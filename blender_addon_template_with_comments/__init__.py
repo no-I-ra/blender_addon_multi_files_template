@@ -33,7 +33,7 @@ bl_info = {
     "name": "Multi files addon Template", # Name of the addon
     "author": "Studio Noira", # Addon's author name
     "version": (1, 0, 0), # Version of the addon
-    "blender": (5, 0, 0), # Blender's version the addon is compatible with.
+    "blender": (4, 0, 0), # Blender's version the addon is compatible with.
     "location": "Studio Noira > View3D > Sidebar", # Info - where to find the addon in Blender UI
     "category": "Studio Noira", # Category of the addon - filter in Blender > Preferences > Addon
 }

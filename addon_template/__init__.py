@@ -24,7 +24,7 @@ bl_info = {
     "name": "Addon template",
     "author": "Author Name",
     "version": (1, 0, 0),
-    "blender": (5, 0, 0),
+    "blender": (4, 0, 0),
     "location": "Template > View3D > Sidebar",
     "category": "",
 }
