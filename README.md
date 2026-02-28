@@ -2,6 +2,7 @@
 A multi-file Blender addon template designed to help organize features, operators, panels, and properties in a clean, scalable way.
 Compatibility tested with Blender 4.x and 5.x.
 
+## What is it?
 This template demonstrates best practices for:
 * Structuring addon features in separate folders
 * Using PropertyGroup, PointerProperty, and CollectionProperty
@@ -13,7 +14,7 @@ Files are commented for clarity, and a Visual Studio solution is included for ea
 
 
 
-# Available templates
+## Available templates
 * __blender_addon_template_with_comments__: template with two features and comments. Use it to understand how it works.
 * __addon_template__: template without any comment and only one feature. Use it as a base to build your own addon.
 
