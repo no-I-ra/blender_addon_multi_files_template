@@ -11,21 +11,24 @@ This template demonstrates best practices for:
 
 Files are commented for clarity, and a Visual Studio solution is included for easier development.
 
-Two templates are available:
-* blender_addon_template_with_comments: template with two features and comments. Use it to understand how it works.
-* addon_template: template without any comment and only one feature. Use it as a base to build your own addon.
+
+
+# Available templates
+* __blender_addon_template_with_comments__: template with two features and comments. Use it to understand how it works.
+* __addon_template__: template without any comment and only one feature. Use it as a base to build your own addon.
 
 The current templates add panels in the View_3D side view. 
 Templates to customize other Blender's UI areas will come later.
 
 
+
 # How to customize the template
-* Use addon_template as a base and rename the folder to match with your addon name.
-* Change the bl_info in the main __init__.py file.
-* Rename the prefixes "NOIRATEMPLATE" and "noiratemplate." that are used in classes to match with your addon name.
-* Change the "bl_category" of panels to match with your addon.
-* Rename "features/feature_a" folder and its file content to match with your addon features. Duplicate it to add another feature.
-* Update features/__init__.py to add all the feature classes your addon implements to "FEATURES = ()". Add an import reload for each feature as well.
+* Use __addon_template__ as a base and rename the folder to match with your addon name.
+* Change the __bl_info__ in the main _\_\_init\_\_.py_ file.
+* Rename the prefixes __NOIRATEMPLATE__ and __noiratemplate__ that are used in classes to match with your addon name.
+* Change the __bl_category__ of panels to match with your addon.
+* Rename _features/feature_a_ folder and its file content to match with your addon features. Duplicate it to add another feature.
+* Update _features/\_\_init\_\_.py_ to add all the feature classes your addon implements to "FEATURES = ()". Add an import reload for each feature as well.
 
 
 
