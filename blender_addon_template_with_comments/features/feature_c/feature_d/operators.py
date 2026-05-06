@@ -3,7 +3,7 @@
 # *************************************************
 
 import bpy
-from ...utils.addon_utils import get_addon_prefs
+from ....utils.addon_utils import get_addon_prefs
 from . import properties
 
 class NOIRATEMPLATE_OT_feature_d_tool1(bpy.types.Operator):

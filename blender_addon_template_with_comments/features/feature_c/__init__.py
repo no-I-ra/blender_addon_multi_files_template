@@ -7,14 +7,6 @@
 # IMPORT
 # --------------------------------------------------
 
-# # Handle reload
-# if "feature_d" in locals():
-#     import importlib
-#     importlib.reload(feature_d)
-# else:
-#     from . import feature_d
-
-
 import bpy
 
 from . import operators
@@ -22,10 +14,12 @@ from . import panels
 from . import properties
 
 
-
-
-
-
+# Handle reload of sub-features
+if "feature_d" in locals():
+    import importlib
+    importlib.reload(feature_d)
+else:
+    from . import feature_d
 
 # --------------------------------------------------
 # REGISTER
@@ -38,11 +32,10 @@ CLASSES = (
     *panels.CLASSES,  # from features/feature_c/panels.py   
 )
 
-# # Feature C sub-features that have been defined in its sub-folders and need to be registered/unregistered
-# FEATURES = (
-#     feature_d,
-# )
-
+# Su-features to register
+SUB_FEATURES = (
+    feature_d,
+)
 
 def register():
     for cls in CLASSES:
@@ -51,15 +44,13 @@ def register():
     if hasattr(properties, "register_properties"):
         properties.register_properties() # register properties from feature_c
 
-    # for feature in FEATURES:
-    #     feature.register() # register each feature from features/feature_c/<FEATURE_NAME>/__init__.py register()
-
-    
+    for sub in SUB_FEATURES: # register sub-features of feature_c
+        sub.register()
 
 def unregister():
 
-    # for feature in reversed(FEATURES): # Importtant to unregister in reverse order.
-    #     feature.unregister() # unregister each feature from features/feature_c/<FEATURE_NAME>/__init__.py unregister()
+    for sub in reversed(SUB_FEATURES): # unregister sub-features of feature_c
+        sub.unregister()
 
     if hasattr(properties, "unregister_properties"):
         properties.unregister_properties() # unregister properties from feature_c

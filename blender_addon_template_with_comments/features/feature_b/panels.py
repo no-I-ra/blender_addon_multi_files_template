@@ -6,7 +6,6 @@
 
 import bpy
 from ...utils.addon_utils import get_addon_prefs
-# from ..common.panels import NOIRATEMPLATE_PT_common_panel
 from . import properties
 
 
@@ -25,7 +24,6 @@ class NOIRATEMPLATE_PT_feature_b_panel(bpy.types.Panel):
     bl_idname = "NOIRATEMPLATE_PT_feature_b_panel"
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
-    # bl_parent_id = "NOIRATEMPLATE_PT_common_panel"
     bl_category = "Studio Noira"
 
     @classmethod

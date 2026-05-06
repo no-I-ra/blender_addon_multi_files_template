@@ -23,9 +23,6 @@ Created by Studio Noira
 '''
 
 
-
-
-
 # --------------------------------------------------
 # ADDON INFO
 # --------------------------------------------------
@@ -37,9 +34,6 @@ bl_info = {
     "location": "Studio Noira > View3D > Sidebar", # Info - where to find the addon in Blender UI
     "category": "Studio Noira", # Category of the addon - filter in Blender > Preferences > Addon
 }
-
-
-
 
 # --------------------------------------------------
 # IMPORT
@@ -73,12 +67,6 @@ else:
 class NOIRATEMPLATE_Preferences(AddonPreferences):
     bl_idname = __name__
 
-    enable_common: BoolProperty(
-        name="Enable Feature Common Tools",
-        default=True,
-        description="Enable or disable the Common panel and operators"
-    ) # type: ignore
-
     enable_feature_a: BoolProperty(
         name="Enable Feature A Tools",
         default=True,
@@ -103,7 +91,6 @@ class NOIRATEMPLATE_Preferences(AddonPreferences):
         layout = self.layout
         col = layout.column()
         col.label(text="Template addon Preferences")    
-        col.prop(self, "enable_common")
         col.prop(self, "enable_feature_a")
         col.prop(self, "enable_feature_b")
         col.prop(self, "enable_feature_c")

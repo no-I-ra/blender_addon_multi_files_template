@@ -27,6 +27,8 @@
     <Folder Include="blender_addon_template_with_comments\features\" />
     <Folder Include="blender_addon_template_with_comments\features\feature_a\" />
     <Folder Include="blender_addon_template_with_comments\features\feature_b\" />
+    <Folder Include="blender_addon_template_with_comments\features\feature_c\" />
+    <Folder Include="blender_addon_template_with_comments\features\feature_c\feature_d\" />
     <Folder Include="blender_addon_template_with_comments\utils\" />
   </ItemGroup>
   <ItemGroup>
@@ -38,6 +40,14 @@
     <Compile Include="blender_addon_template_with_comments\features\feature_b\panels.py" />
     <Compile Include="blender_addon_template_with_comments\features\feature_b\properties.py" />
     <Compile Include="blender_addon_template_with_comments\features\feature_b\__init__.py" />
+    <Compile Include="blender_addon_template_with_comments\features\feature_c\feature_d\operators.py" />
+    <Compile Include="blender_addon_template_with_comments\features\feature_c\feature_d\panels.py" />
+    <Compile Include="blender_addon_template_with_comments\features\feature_c\feature_d\properties.py" />
+    <Compile Include="blender_addon_template_with_comments\features\feature_c\feature_d\__init__.py" />
+    <Compile Include="blender_addon_template_with_comments\features\feature_c\operators.py" />
+    <Compile Include="blender_addon_template_with_comments\features\feature_c\panels.py" />
+    <Compile Include="blender_addon_template_with_comments\features\feature_c\properties.py" />
+    <Compile Include="blender_addon_template_with_comments\features\feature_c\__init__.py" />
     <Compile Include="blender_addon_template_with_comments\features\__init__.py" />
     <Compile Include="blender_addon_template_with_comments\utils\addon_utils.py" />
     <Compile Include="blender_addon_template_with_comments\__init__.py" />
