@@ -12,7 +12,13 @@ class NOIRATEMPLATE_OT_feature_d_tool1(bpy.types.Operator):
     bl_options = {'REGISTER', 'UNDO'}
 
     def execute(self, context):
-        self.report({'INFO'}, 'Feature D - Tool 1')
+        
+
+        ppties_c = context.scene.feature_c_ppties # Get feature C properties
+        print(f"bool_ppty_c (from feature C properties) value is: {ppties_c.bool_ppty_c}")
+
+
+        self.report({'INFO'}, f"Feature D - Tool 1 | bool_ppty_c (from feature C properties) value is: {ppties_c.bool_ppty_c}")
         return {'FINISHED'}
 
 

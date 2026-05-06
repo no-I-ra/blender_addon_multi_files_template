@@ -20,6 +20,9 @@ class NOIRATEMPLATE_PT_feature_c_panel(bpy.types.Panel):
 
     def draw(self, context):
         layout = self.layout
+        props = context.scene.feature_c_ppties
+
+        layout.prop(props, "bool_ppty_c")
         layout.operator("noiratemplate.feature_c_tool1")
 
 # Classes to registered/unregistered from features/feature_a/__init__.py

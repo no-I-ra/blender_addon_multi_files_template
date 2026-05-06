@@ -6,10 +6,11 @@ import bpy
 from bpy.props import BoolProperty
 
 class NOIRATEMPLATE_PG_FeatureD(bpy.types.PropertyGroup):
-    bool_ppty: BoolProperty(
-        name="Boolean property",
+    bool_ppty_d: BoolProperty(
+        name="Boolean property D",
         default=True
         ) # type: ignore
+
 
 
 

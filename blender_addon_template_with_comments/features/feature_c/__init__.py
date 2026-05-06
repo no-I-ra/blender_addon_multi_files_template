@@ -32,7 +32,7 @@ CLASSES = (
     *panels.CLASSES,  # from features/feature_c/panels.py   
 )
 
-# Su-features to register
+# Sub-features to register
 SUB_FEATURES = (
     feature_d,
 )
