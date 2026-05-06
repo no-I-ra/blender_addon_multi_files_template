@@ -27,7 +27,9 @@ CLASSES = (
 
 MENUS = (
     *menus.MENUS,
+    *menus.HEADERS,
 )
+
 
 
 def register():
@@ -39,21 +41,18 @@ def register():
         properties.register_properties() # register properties from feature_d
 
     for menu_id, func in MENUS:
-        getattr(bpy.types, menu_id).append(func)
+        menu = getattr(bpy.types, menu_id)
+        menu.remove(func) # ensure the menu appends only once
+        menu.append(func)
 
-    # # register menus
-    # for menu in MENUS:
-    #     if hasattr(menu, "register"):
-    #         menu.register()
 
-    
+    for menu_id, func in MENUS:
+        menu = getattr(bpy.types, menu_id)
+
+        if(not menu.remove(func)):
+            menu.append(func)
 
 def unregister():
-
-    # # unregister menus first (important)
-    # for menu in reversed(MENUS):
-    #     if hasattr(menu, "unregister"):
-    #         menu.unregister()
 
     for menu_id, func in MENUS:
         getattr(bpy.types, menu_id).remove(func)

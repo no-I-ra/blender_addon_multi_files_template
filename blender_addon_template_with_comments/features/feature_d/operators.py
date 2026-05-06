@@ -12,6 +12,12 @@ class NOIRATEMPLATE_OT_feature_d_tool1(bpy.types.Operator):
     bl_options = {'REGISTER', 'UNDO'}
 
     def execute(self, context):
+        active = context.active_object
+        selected = [o for o in context.selected_objects if o != active]
+
+        print(f"active: {active}")
+        print(f"selected: {selected}")
+
         self.report({'INFO'}, 'Feature D - Tool 1')
         return {'FINISHED'}
 
