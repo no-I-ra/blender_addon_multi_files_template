@@ -1,5 +1,5 @@
 # **************************************************
-# Register Feature B classes
+# Register Feature A classes
 # **************************************************
 
 
@@ -19,7 +19,7 @@ from . import properties
 # REGISTER
 # --------------------------------------------------
 
-# Classes to register. Order matters
+# Classes to register. ORDER MATTERS!
 CLASSES = (
     *properties.CLASSES, # from features/feature_a/properties.py
     *operators.CLASSES, # from features/feature_a/operators.py

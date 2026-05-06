@@ -9,6 +9,12 @@
 # --------------------------------------------------
 
 # Handle reload
+if "common" in locals(): # register common features first as it can be used by other features, like sub-panels for example
+    import importlib
+    importlib.reload(common)
+else:
+    from . import common
+
 if "feature_a" in locals():
     import importlib
     importlib.reload(feature_a)
@@ -21,6 +27,19 @@ if "feature_b" in locals():
 else:
     from . import feature_b
 
+if "feature_c" in locals():
+    import importlib
+    importlib.reload(feature_c)
+else:
+    from . import feature_c
+
+if "feature_d" in locals():
+    import importlib
+    importlib.reload(feature_d)
+else:
+    from . import feature_d
+
+
 
 
 # --------------------------------------------------
@@ -29,8 +48,11 @@ else:
 
 # All addon features that have been defined in sub-folders and need to be registered/unregistered
 FEATURES = (
+    common, 
     feature_a,
     feature_b,
+    feature_c,
+    feature_d,
 )
 
 

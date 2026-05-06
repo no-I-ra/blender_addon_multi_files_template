@@ -1,7 +1,7 @@
 import bpy
 from bpy.props import BoolProperty
 
-class NOIRATEMPLATE_FeatureAProperties(bpy.types.PropertyGroup):
+class NOIRATEMPLATE_PG_FeatureA(bpy.types.PropertyGroup):
     bool_ppty: BoolProperty(
         name="Boolean property",
         default=True
@@ -10,14 +10,14 @@ class NOIRATEMPLATE_FeatureAProperties(bpy.types.PropertyGroup):
 
 
 CLASSES = (
-    NOIRATEMPLATE_FeatureAProperties,
+    NOIRATEMPLATE_PG_FeatureA,
 )
 
 
 
 def register_properties():
     bpy.types.Scene.feature_a_ppties = bpy.props.PointerProperty(
-        type=NOIRATEMPLATE_FeatureAProperties
+        type=NOIRATEMPLATE_PG_FeatureA
     )
 
 

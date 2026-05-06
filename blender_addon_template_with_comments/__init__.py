@@ -73,6 +73,12 @@ else:
 class NOIRATEMPLATE_Preferences(AddonPreferences):
     bl_idname = __name__
 
+    enable_common: BoolProperty(
+        name="Enable Feature Common Tools",
+        default=True,
+        description="Enable or disable the Common panel and operators"
+    ) # type: ignore
+
     enable_feature_a: BoolProperty(
         name="Enable Feature A Tools",
         default=True,
@@ -85,12 +91,23 @@ class NOIRATEMPLATE_Preferences(AddonPreferences):
         description="Enable or disable the Feature B panel and operators"
     ) # type: ignore
 
+    enable_feature_c: BoolProperty(
+        name="Enable Feature C Tools",
+        default=True,
+        description="Enable or disable the Feature C panel and operators"
+    ) # type: ignore
+
+    
+
     def draw(self, context):
         layout = self.layout
         col = layout.column()
-        col.label(text="Template addon Preferences")        
+        col.label(text="Template addon Preferences")    
+        col.prop(self, "enable_common")
         col.prop(self, "enable_feature_a")
         col.prop(self, "enable_feature_b")
+        col.prop(self, "enable_feature_c")
+        
 
 
 

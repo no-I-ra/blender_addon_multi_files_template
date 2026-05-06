@@ -1,11 +1,11 @@
 # **************************************************
-# Feature A Properties
+# Commonn Properties
 # **************************************************
 
 import bpy
 from bpy.props import BoolProperty
 
-class NOIRATEMPLATE_PG_FeatureA(bpy.types.PropertyGroup):
+class NOIRATEMPLATE_CommonProperties(bpy.types.PropertyGroup):
     bool_ppty: BoolProperty(
         name="Boolean property",
         default=True
@@ -15,14 +15,15 @@ class NOIRATEMPLATE_PG_FeatureA(bpy.types.PropertyGroup):
 
 # Classes to registered/unregistered from features/feature_a/__init__.py
 CLASSES = (
-    NOIRATEMPLATE_PG_FeatureA,
+    NOIRATEMPLATE_CommonProperties,
 )
 
 
 # functions to registered/unregistered the proeprties from features/feature_a/__init__.py
 def register_properties():
+
     bpy.types.Scene.feature_a_ppties = bpy.props.PointerProperty(
-        type=NOIRATEMPLATE_PG_FeatureA
+        type=NOIRATEMPLATE_CommonProperties
     )
 
 
