@@ -15,11 +15,11 @@ from . import properties
 
 
 # Handle reload of sub-features
-if "feature_d" in locals():
+if "sub_a" in locals():
     import importlib
-    importlib.reload(feature_d)
+    importlib.reload(sub_a)
 else:
-    from . import feature_d
+    from . import sub_a
 
 # --------------------------------------------------
 # REGISTER
@@ -34,7 +34,7 @@ CLASSES = (
 
 # Sub-features to register
 SUB_FEATURES = (
-    feature_d,
+    sub_a,
 )
 
 def register():

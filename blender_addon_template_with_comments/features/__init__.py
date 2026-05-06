@@ -27,6 +27,12 @@ if "feature_c" in locals():
 else:
     from . import feature_c
 
+if "feature_d" in locals():
+    import importlib
+    importlib.reload(feature_d)
+else:
+    from . import feature_d
+
 
 
 # --------------------------------------------------
@@ -38,6 +44,7 @@ FEATURES = (
     feature_a,
     feature_b,
     feature_c,
+    feature_d,
 )
 
 

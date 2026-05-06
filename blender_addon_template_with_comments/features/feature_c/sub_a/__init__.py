@@ -1,5 +1,5 @@
 # **************************************************
-# Register Feature D classes
+# Register Feature C > Sub-Feature A classes
 # **************************************************
 
 
@@ -21,9 +21,9 @@ from . import properties
 
 # Classes to register. Order matters
 CLASSES = (
-    *properties.CLASSES, # from features/feature_c/feature_d/properties.py
-    *operators.CLASSES, # from features/feature_c/feature_d/operators.py
-    *panels.CLASSES,  # from features/feature_c/feature_d/panels.py
+    *properties.CLASSES, # from features/feature_c/sub_a/properties.py
+    *operators.CLASSES, # from features/feature_c/sub_a/operators.py
+    *panels.CLASSES,  # from features/feature_c/sub_a/panels.py
 )
 
 

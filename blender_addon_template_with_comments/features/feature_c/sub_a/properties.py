@@ -1,5 +1,5 @@
 # **************************************************
-# Feature D Properties
+# Feature C > Sub-Feature A Properties
 # **************************************************
 
 import bpy
@@ -20,12 +20,12 @@ CLASSES = (
 )
 
 
-# functions to registered/unregistered the proeprties from features/feature_c/feature_d/__init__.py
+# functions to registered/unregistered the proeprties from features/feature_c/sub_a/__init__.py
 def register_properties():
-    bpy.types.Scene.feature_d_ppties = bpy.props.PointerProperty(
+    bpy.types.Scene.sub_a_ppties = bpy.props.PointerProperty(
         type=NOIRATEMPLATE_PG_FeatureD
     )
 
 
 def unregister_properties():
-    del bpy.types.Scene.feature_d_ppties
+    del bpy.types.Scene.sub_a_ppties

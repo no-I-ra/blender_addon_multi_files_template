@@ -85,6 +85,12 @@ class NOIRATEMPLATE_Preferences(AddonPreferences):
         description="Enable or disable the Feature C panel and operators"
     ) # type: ignore
 
+    enable_feature_d: BoolProperty(
+        name="Enable Feature D Tools",
+        default=True,
+        description="Enable or disable the Feature D panel and operators"
+    ) # type: ignore
+
     
 
     def draw(self, context):
@@ -94,6 +100,7 @@ class NOIRATEMPLATE_Preferences(AddonPreferences):
         col.prop(self, "enable_feature_a")
         col.prop(self, "enable_feature_b")
         col.prop(self, "enable_feature_c")
+        col.prop(self, "enable_feature_d")
         
 
 
